@@ -1,0 +1,13 @@
+
+<div>
+    <div *ngFor = "let movie of moviesFound" (click) = "onClick(movie)">
+        <div class= "movie-image">
+            <img [src]= "baseImageUrl+movie.poster_path">
+        </div> 
+        <div class= "movie-details">
+            <p>{{movie.title}}</p>
+            <p>Rated {{movie.vote_average}}</p>
+            <p>Released on : {{movie.release_date}}</p>
+        </div>      
+    </div>
+</div>
